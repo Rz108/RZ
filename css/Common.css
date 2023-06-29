@@ -1,0 +1,501 @@
+/*
+Author: Goh Rui Zhuo
+Date:   07/07/2022
+
+Filename:Common.css
+
+*/
+/*reset styles*/
+address,
+article,
+aside,
+blockquote,
+body,
+cite,
+div,
+figcaption,
+figure,
+footer,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+html,
+img,
+main,
+nav,
+ol,
+section,
+p,
+span,
+ul {
+    background: transparent;
+    font-size: 100%;
+    vertical-align: baseline;
+    box-sizing: border-box;
+
+}
+
+/*set all fonts to be sans-seif*/
+html {
+    font-family: sans-serif !important;
+}
+
+/*set the navbar hover styles*/
+.navbar-collapse ul li a:hover {
+    background: linear-gradient(45deg, rgb(157, 190, 169) 29%, rgba(125,167,176,1) 79%);
+    color:black !important;
+    border-radius: 20px;
+    box-shadow: 0 2px 2px 0 #dadadc ;
+    transition: 0.2s;
+}
+
+
+/*set the style for screen less than 992px */
+@media screen and (min-width:992px) {
+    .navbar-collapse {
+        margin-right: 50px;
+        
+    }
+
+    .navbar-collapse ul{
+        left:10px;
+        font-size: 18px;
+        
+    }
+
+}
+/*set the style for screen less than 992px */
+@media screen and (max-width:992px) {
+    .navbar-collapse {
+        background-color: #587d71;
+        text-align: center;
+        border-radius: 20px;
+        opacity: 0.9;
+    }
+
+    .navbar-collapse form {
+        width: 50%;
+        margin-left: 25%;
+
+    }
+}
+
+/*style the logo*/
+.logo {
+    width: 70px;
+    height: 90%;
+}
+
+
+
+
+/*style the border of carousel*/
+/*style the scroll bar*/
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+@media screen and (max-width:576px) {
+    ::-webkit-scrollbar {
+        width: 0
+    }
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(73, 117, 127, 0.443);
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #8e8b8b;
+}
+
+
+/*style the catbot*/
+.chat-bar-collapsible {
+    position: fixed;
+    bottom: 10px;
+    right: 50px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.collapsible {
+    background-color: rgba(58, 81, 117, 0.789);
+    color: rgba(253, 253, 253, 0.964);
+    cursor: pointer;
+    padding: 18px;
+    width: 200px;
+    text-align: center;
+    outline: none;
+    font-size: 18px;
+    border-radius: 10px 10px 10px 10px;
+    border: 3px solid rgb(220, 219, 219);
+    border-bottom: none;
+}
+
+.content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #1b1a1a;
+}
+
+.block {
+    width: 200px;
+    background: white;
+    text-align: center;
+    overflow: auto;
+    height: max-content;
+    transition: max-height 0.2s ease-out;
+}
+
+.block {
+    min-height: 300px;
+    bottom: 0%;
+    position: relative;
+}
+
+.inner-box {
+    max-height: 300px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.input_block {
+    display: flex;
+    float: left;
+    box-sizing: border-box;
+    width: 100%;
+    align-items: center;
+    background-color: rgb(77, 77, 77);
+    padding: 5px 5px 5px 5px;
+    border-radius: 10px 10px 10px 10px;
+    justify-content: space-between;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    width: 18%;
+    float: right;
+    font-size: 25px;
+    color: white
+}
+
+#chat-icon:hover {
+    opacity: .7;
+    cursor: pointer
+}
+
+
+#userInput {
+    width: 75%;
+}
+
+.input-box {
+    float: left;
+    border: none;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    color: #000;
+    background-color: white;
+}
+
+.userText {
+    color: white;
+    font-family: Helvetica;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: right;
+    clear: both;
+}
+
+.userText span {
+    line-height: 1.5em;
+    display: inline-block;
+    background: #3b526c;
+    padding: 10px;
+    border-radius: 8px;
+    border-bottom-right-radius: 2px;
+    max-width: 80%;
+    margin-right: 10px;
+    animation: floatup .5s forwards
+}
+
+.botText {
+    color: #000;
+    font-family: Helvetica;
+    font-weight: normal;
+    font-size: 16px;
+    text-align: left;
+}
+
+.botText span {
+    line-height: 1.5em;
+    display: inline-block;
+    background: #a59f9f;
+    padding: 10px;
+    border-radius: 8px;
+    border-bottom-left-radius: 5px;
+    max-width: 80%;
+    margin-left: 10px;
+    animation: floatup .5s forwards
+}
+
+#chat-icon {
+    color: white
+}
+/*style the animation for chatbot*/
+@keyframes floatup {
+    from {
+        transform: translateY(14px);
+        opacity: .0;
+    }
+
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .block {
+        width: 185px;
+        border-radius: 0px;
+    }
+
+
+    .collapsible {
+        width: 100%;
+        right: 0;
+        border: 0px;
+        border-top: 3px solid white;
+        border-radius: 0px;
+        border-radius: 20px;
+    }
+}
+/*style the back to top button*/
+.BackToTop {
+    position: fixed;
+    right: 5px;
+    bottom: 40px;
+    border-radius: 100%;
+    background: #37373a;
+    padding: 0.5rem;
+    border: none;
+    cursor: pointer;
+    opacity: 100%;
+    transition: opacity 0.5s;
+}
+
+
+.hidden {
+    opacity: 0%;
+}
+
+.BTTicon {
+    width: 2rem;
+    height: 2rem;
+    color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px 5px #000000;
+}
+/*style the progress bar*/
+.progress-bar {
+    height: 1rem;
+    background: linear-gradient(45deg, rgb(118, 119, 120) 20%, rgb(187, 187, 187) 80%);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+/*stylt the voice assitant*/
+.input-voice {
+    position: fixed;
+    left: 20px;
+    bottom: 40px;
+    border-radius: 100%;
+    background: #103a32;
+    box-shadow: 3px 3px 3px 3px #000000;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    opacity: 100%;
+    transition: opacity 0.5s;
+}
+/*style the footer area*/
+.footer-area {
+    background: rgb(22, 43, 75);
+    background: linear-gradient(rgb(21, 65, 54) 33%, rgb(24, 49, 36) 67%);
+    color: rgb(225, 225, 225);
+    position: relative;
+    width: 100%;
+}
+
+
+/* @keyframes animate {
+    0% {
+        background-position-x: 0;
+    }
+
+    100% {
+        background-position-x: 100%;
+    }
+} */
+
+
+.footers {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+}
+
+.footer {
+    width: 275px;
+
+}
+
+.footer:first-child {
+    width: 350px
+}
+
+.footer h4 {
+    text-transform: capitalize;
+    font-size: 25px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+.socials a {
+    color: rgb(206, 206, 206);
+    border: 2px solid rgb(246, 246, 246);
+    height: 50px;
+    border-radius: 20px;
+    width: 45px;
+    display: inline-block;
+    text-align: center;
+    line-height: 40px;
+    margin-right: 10px
+}
+
+.footer ul li {
+    list-style-type: none;
+}
+
+.footer ul li {
+    margin-bottom: 8px;
+    position: relative;
+
+}
+
+.footer ul li a {
+    color: rgb(222, 222, 222);
+    text-transform: capitalize;
+    text-decoration: antiquewhite;
+}
+
+.footer ul li a:hover {
+    background-color: rgb(88, 124, 133);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.footer ul li a i {
+    position: relative;
+    left: -20px;
+    top: 4px;
+
+}
+
+.copyright {
+    text-align: center;
+    text-transform: uppercase;
+
+}
+
+/* Icon 1 */
+
+.icon1 {
+    width: 30px;
+    height: 25px;
+    position: relative;
+    margin: 0px;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+.icon1 span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+.icon1 span {
+    background: #2d7ef7;
+}
+
+
+.icon1 span:nth-child(1) {
+    top: 0px;
+}
+
+.icon1 span:nth-child(2) {
+    top: 10px;
+}
+
+.icon1 span:nth-child(3) {
+    top: 20px;
+}
+
+.icon1.open span:nth-child(1) {
+    top: 11px;
+    transform: rotate(135deg);
+}
+
+.icon1.open span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+}
+
+.icon1.open span:nth-child(3) {
+    top: 11px;
+    transform: rotate(-135deg);
+}
+
+
+#waterdrop {
+    height: 10px;
+    overflow: visible !important
+}
+
+canvas {
+    height: 20px;
+    width: 100%;
+}
