@@ -429,16 +429,16 @@ svg {
     animation: bar 2.8s;
     height: 5px;
     background: #93cfbf;
-    width: 75%;
+    width: 80%;
 }
 
 .li_content .da {
-    width: 75%;
+    width: 80%;
     background: #93cfbf;
 }
 
 .li_content .dv {
-    width: 70%;
+    width: 75%;
     background: #93cfbf;
 }
 
